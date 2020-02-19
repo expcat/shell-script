@@ -44,7 +44,7 @@ images=(
 [mcr.microsoft.com/dotnet/core/sdk]="sdk|3.1.102|3.1|latest"
 [mcr.microsoft.com/dotnet/core/aspnet]="aspnet|3.1.2|3.1|latest"
 )
-exec_command "docker login -n=$username -p=$password $site"
+exec_command "docker login -u=$username -p=$password $site"
 for key in $(echo ${!images[*]})
 do
     array=(`echo ${images[$key]} | tr '|' ' '` )
