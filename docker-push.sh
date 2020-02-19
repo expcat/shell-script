@@ -20,9 +20,11 @@ do
     esac
 done
 if [[ -z $username || -z $password ]]; then
+    if [[ -z $env ]] || [ $env != "test" ]; then
         echo $show_usage
         echo "username: $username password: $password env: $env"
         exit 0
+    fi
 fi
 if [[ -z $env ]]; then
     env="test"
