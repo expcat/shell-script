@@ -6,7 +6,7 @@ export PATH
 username=""
 password=""
 env=""
-show_usage="args: [-u , -p, -e prod] [--username=, --password=, --env=prod]"
+show_usage="args: [-u , -p, -e prod|test] [--username=, --password=, --env=prod|test]"
 getopt_args=`getopt -o u:p:e: -al username:,password:,env: -- "$@"`
 eval set -- "$getopt_args"
 while [ -n "$1" ]
